@@ -1,0 +1,46 @@
+/* Spacing, etc. Defaults */
+div, ul, li, dl, dt, dd, form, input, textarea, h1, h2, h3, h4, h5, h6, img, a, td, table, fieldset, legend, select, label { margin: 0; padding: 0 }
+
+fieldset, img { border: none; }
+
+input, button { border: 1px solid #000; background: #fff; padding: 3px; }
+input:hover { background: #f7f7f7; }
+textarea { border: 1px solid #000; padding: 5px; }
+
+table { border-right: 1px solid #000; border-bottom: 1px solid #000; border-collapse: collapse; text-align: center; }
+td { border-left: 1px solid #000; border-top: 1px solid #000; }
+th { border-left: 1px solid #000; border-top: 1px solid #000; padding: 5px; background-color: #eee; }
+ul { list-style: none; }
+hr { height: 1px; border: none; clear: both; background: #000; }
+
+dt { clear: both; float: left; text-align: right; }
+dd { text-align: left; }
+
+/* End Defaults */
+
+a, a:visited { color: #ee0000; text-decoration: none; }
+a:hover, a:active { text-decoration: underline; }
+
+legend { font-weight: bold; }
+
+#feedback,
+#debug
+{
+  font-size: 10px;
+  background: #f7f7f7;
+  padding: 5px;
+  border: 1px solid #000;
+  margin: 5px;
+}
+
+#submit-recipe #Title { width: 300px; }
+#submit-recipe #Ingredients { width: 305px; }
+#submit-recipe #Tags { width: 355px; }
+
+#submit-recipe textarea
+{
+  height: 200px;
+  width: 400px;
+  display: block;
+  margin-top: 10px;
+}

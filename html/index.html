@@ -1,0 +1,40 @@
+<h1>Welcome to Pizza-n-Ramen!</h1>
+
+<? if( !IS_LOGGED_IN ): ?>
+<a href="<?=WWW?>/signup.php">Signup</a>
+<div>
+  <form method="post" action="<?=WWW?>/login.php">
+    <fieldset>
+      <legend>Login</legend>
+      <label for="username">Username</label>: <input id="username" type="text" name="username">
+      <label for="password">Password</label>: <input id="password" type="password" name="password">
+      <input type="submit" value="Login">
+    </fieldset>
+  </form>
+</div>
+<? else: ?>
+<p><a href="<?=WWW?>/logout.php" title="plz don't leave me :(">Logout</a></p>
+
+<p><a href="<?=WWW?>/submit-recipe.php" title="Submit already!">Submit Recipe</a></p>
+<? endif; ?>
+
+<h2>Most Recent Recipes</h2>
+<ul>
+<? foreach( $aMostRecent as $aRecipe ):
+include(HTML.'featured-recipe.html');
+endforeach; ?>
+</ul>
+
+<h2>Most Popular Recipes</h2>
+<ul>
+<? foreach( $aMostPopular as $aRecipe ):
+include(HTML.'featured-recipe.html');
+endforeach; ?>
+</ul>
+
+<h2>Most Popular Tags</h2>
+<ul>
+<? foreach( $aMostPopularTags as $aTag ):
+include(HTML.'featured-tag.html');
+endforeach; ?>
+</ul>

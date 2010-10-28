@@ -1,0 +1,18 @@
+<? if( !$_POST ): ?>
+<div>
+  <form method="post" action="<?=WWW?>/signup.php">
+    <fieldset>
+      <legend>Signup</legend>
+      <p><label for="username">Username</label>: <input id="username" type="text" name="username"></p>
+      <p><label for="email">Email</label>: <input id="email" type="text" name="email"></p>
+      <p><label for="password">Password</label>: <input id="password" type="password" name="password"></p>
+      <p><input type="submit" value="Signup"></p>
+    </fieldset>
+  </form>
+</div>
+<? else: ?>
+<div>
+  <h2>Signup Successful!</h2>
+  <p>Thank you for signing up! Please return <a href="<?=WWW?>" title="home">home</a></p>
+</div>
+<? endif; ?>
